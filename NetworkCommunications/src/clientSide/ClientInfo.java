@@ -70,57 +70,100 @@ public class ClientInfo implements Serializable
 		this.passwordHashCode = client.getPassword();
 	}
 	
+	/**
+	 * @param username
+	 */
 	public ClientInfo(String username)
 	{
 		this();
 		this.username = username;
 	}
 	
+	/**
+	 * 
+	 * @return signedIn
+	 */
 	public boolean getSignedIn()
 	{
 		return signedIn;
 	}
 	
+	/**
+	 * 
+	 * @param signedIn
+	 */
 	public void setSignedIn(boolean signedIn)
 	{
 		this.signedIn = signedIn;
 	}
 	
+	/**
+	 * 
+	 * @return username
+	 */
 	public String getUsername()
 	{
 		return username;
 	}
 	
+	/**
+	 * 
+	 * @param username
+	 */
 	public void setUsername(String username)
 	{
 		this.username = username;
 	}
 	
+	/**
+	 * 
+	 * @return IPAddress
+	 */
 	public InetAddress getIPAddress()
 	{
 		return IPAddress;
 	}
 	
+	/**
+	 * 
+	 * @param IPAddress
+	 */
 	public void setIPAddress(InetAddress IPAddress)
 	{
 		this.IPAddress = IPAddress;
 	}
 	
+	/**
+	 * 
+	 * @return publicKey
+	 */
 	public PublicKey getPublicKey()
 	{
 		return publicKey;
 	}
 	
+	/**
+	 * 
+	 * @param publicKey
+	 */
 	public void setPublicKey(PublicKey publicKey)
 	{
 		this.publicKey = publicKey;
 	}
 	
+	/**
+	 * 
+	 * @return passwordHashCode
+	 */
 	public String getPassword()
 	{
 		return passwordHashCode;
 	}
 	
+	/**
+	 * 
+	 * @param password
+	 */
 	public void setPassword(String password)
 	{
 		this.passwordHashCode = password;
