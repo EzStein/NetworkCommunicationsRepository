@@ -16,7 +16,6 @@ public class ServerGUI extends GUI
 {
 	/**
 	 * 
-	 * ????
 	 * Used to except clients and assign each one a new thread (ServerSide) to handle them.
 	 */
 	private ClientAccepter clientAccepter;
