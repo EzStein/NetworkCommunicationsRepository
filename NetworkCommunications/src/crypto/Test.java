@@ -1,8 +1,4 @@
 package crypto;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
 /**
  * 
  * @author Ezra

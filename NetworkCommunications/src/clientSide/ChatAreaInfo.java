@@ -32,6 +32,9 @@ public class ChatAreaInfo implements Serializable
 	private String text;
 	private String id;
 	
+	/**
+	 * Creates a chat area info object with default parameters.
+	 */
 	public ChatAreaInfo()
 	{
 		clients = new ArrayList<ClientInfo>();
@@ -72,51 +75,91 @@ public class ChatAreaInfo implements Serializable
 		}
 	}
 	
+	/**
+	 * 
+	 * @return clients
+	 */
 	public ArrayList<ClientInfo> getClients()
 	{
 		return clients;
 	}
 	
+	/**
+	 * 
+	 * @return clientsVisible
+	 */
 	public ArrayList<String> getClientsVisible()
 	{
 		return clientsVisible;
 	}
 	
+	/**
+	 * 
+	 * @param clientsVisible
+	 */
 	public void setClientsVisible(ArrayList<String> clientsVisible)
 	{
 		this.clientsVisible = clientsVisible;
 	}
 	
+	/**
+	 * 
+	 * @return id
+	 */
 	public String getId()
 	{
 		return id;
 	}
 	
+	/**
+	 * 
+	 * @return name
+	 */
 	public String getName()
 	{
 		return name;
 	}
 	
+	/**
+	 * 
+	 * @return key
+	 */
 	public BigInteger getKey()
 	{
 		return key;
 	}
 	
+	/**
+	 * 
+	 * @param name
+	 */
 	public void setName(String name)
 	{
 		this.name = name;
 	}
 	
+	/**
+	 * 
+	 * @param key
+	 */
 	public void setKey(BigInteger key)
 	{
 		this.key = key;
 	}
 	
+	/**
+	 * 
+	 * @return text
+	 */
 	public String getText()
 	{
 		return text;
 	}
 	
+	/**
+	 * 
+	 * @param text
+	 */
 	public void setText(String text)
 	{
 		this.text = text;
