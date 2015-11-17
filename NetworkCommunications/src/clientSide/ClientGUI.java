@@ -61,13 +61,7 @@ public class ClientGUI extends GUI
 	{
 		SwingUtilities.invokeLater(new Runnable(){public void run(){
 			String[][] s = {{"Client","Quit"},{"Edit", "Leave Chat Area", "Request Update"}};
-			/*String input = JOptionPane.showInputDialog(new JFrame(), "What IP address should we connect to.");
-			if(input == null)
-			{
-				System.exit(0);
-			}
-			new ClientGUI("No Chat Area",s,input);*/
-			new ClientGUI("No Chat Area",s,"72.93.84.140");
+			new ClientGUI("Client",s,"72.93.84.140");
 			}});
 	}
 	
@@ -158,7 +152,6 @@ public class ClientGUI extends GUI
 	 */
 	public void enterChatArea()
 	{
-		
 		inChatArea = true;
 		getMenuItem("Leave Chat Area").setEnabled(true);
 		tabbedPane.addTab("CHAT PANEL", null, chatPanel, "Chat");
@@ -168,81 +161,7 @@ public class ClientGUI extends GUI
 		contentPane.validate();
 	}
 	
-	/**
-	 * Returns the chatArea of this GUI.
-	 * @return the chatArea of this GUI.
-	 */
-	public JTextArea getChatArea()
-	{
-		return chatPanel.getChatArea();
-	}
 	
-	/**
-	 * Returns whether the client is in a chat area.
-	 * @return true if the client is in a chat area.
-	 */
-	public boolean inChatArea()
-	{
-		return inChatArea;
-	}
-	
-	/**
-	 * Returns the info area of this GUI.
-	 * @return the info area of this GUI
-	 */
-	public DataPanel getDataPanel()
-	{
-		return dataPanel;
-	}
-	
-	
-	
-	/**
-	 * Listens for events on this frame and handles closing duties.
-	 */
-	private class FrameListener implements WindowListener
-	{
-
-		@Override
-		public void windowOpened(WindowEvent e) {
-			// TODO Auto-generated method stub
-		}
-
-		@Override
-		public void windowClosing(WindowEvent e)
-		{
-			close();
-		}
-
-		@Override
-		public void windowClosed(WindowEvent we)
-		{	
-		}
-
-		@Override
-		public void windowIconified(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowDeiconified(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowActivated(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-
-		@Override
-		public void windowDeactivated(WindowEvent e) {
-			// TODO Auto-generated method stub
-			
-		}
-	}
 	
 	/**
 	 * Called by the client side when it has successfully logged in.
@@ -329,11 +248,85 @@ public class ClientGUI extends GUI
 	}
 	
 	/**
+	 * Returns the chatArea of this GUI.
+	 * @return the chatArea of this GUI.
+	 */
+	public JTextArea getChatArea()
+	{
+		return chatPanel.getChatArea();
+	}
+	
+	/**
+	 * Returns whether the client is in a chat area.
+	 * @return true if the client is in a chat area.
+	 */
+	public boolean inChatArea()
+	{
+		return inChatArea;
+	}
+	
+	/**
+	 * Returns the info area of this GUI.
+	 * @return the info area of this GUI
+	 */
+	public DataPanel getDataPanel()
+	{
+		return dataPanel;
+	}
+	
+	/**
 	 * Sets the currently viewed panel to the tab with the specified index.
 	 * @param index - the index to view.
 	 */
 	public void setTabbedPaneSelectedIndex(int index)
 	{
 		tabbedPane.setSelectedIndex(index);
+	}
+	
+	/**
+	 * Listens for events on this frame and handles closing duties.
+	 */
+	private class FrameListener implements WindowListener
+	{
+
+		@Override
+		public void windowOpened(WindowEvent e) {
+			// TODO Auto-generated method stub
+		}
+
+		@Override
+		public void windowClosing(WindowEvent e)
+		{
+			close();
+		}
+
+		@Override
+		public void windowClosed(WindowEvent we)
+		{	
+		}
+
+		@Override
+		public void windowIconified(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowDeiconified(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowActivated(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void windowDeactivated(WindowEvent e) {
+			// TODO Auto-generated method stub
+			
+		}
 	}
 }
